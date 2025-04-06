@@ -16,15 +16,11 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-  {
     path: "/books",
     element: <BooksPage/>,
   },
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
   }
 ]); 
