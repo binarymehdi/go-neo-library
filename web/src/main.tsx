@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import theme from './theme';
+import { Home } from './features/home/index';
 
 import {
   createBrowserRouter,
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: "/books",
     element: <BooksPage/>,
   },
+  {
+    path: "/home",
+    element: <Home />,
+  }
 ]); 
 
 const queryClient = new QueryClient();
