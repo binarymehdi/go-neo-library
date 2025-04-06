@@ -7,7 +7,7 @@ export default function HeroBanner() {
         position: "relative",
         backgroundColor: "grey.800",
         color: "#fff",
-        mb: 4,
+        // mb: 4,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

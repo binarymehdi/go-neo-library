@@ -32,6 +32,21 @@ export default function HeroBanner() {
     }, 1000)
   }, [])
 
+  const handleDelete = (id: string) => {
+    setData(prevData => prevData.filter(item => item.id !== id));
+  };
+
+  const handleEdit = (id: string) => {
+    // You could open a modal here or redirect to an edit page
+    alert(`Edit book with ID: ${id}`);
+  };
+
+  const handleView = (id: string) => {
+    // Navigate to a book detail page or open a modal
+    alert(`View book with ID: ${id}`);
+  };
+
+
   return (
     <Box
       sx={{
@@ -158,7 +173,6 @@ export default function HeroBanner() {
                       {item.description}
                     </Typography>
                   </CardContent>
-
                   <CardActions sx={{ p: 2, pt: 0, justifyContent: "space-between" }}>
                     <Box sx={{ display: "flex", gap: 1 }}>
                       <Button
@@ -166,6 +180,7 @@ export default function HeroBanner() {
                         variant="outlined"
                         color="error"
                         startIcon={<DeleteIcon />}
+                        onClick={() => handleDelete(item.id)}
                         sx={{
                           borderRadius: 2,
                           textTransform: "none",
@@ -179,6 +194,7 @@ export default function HeroBanner() {
                         variant="outlined"
                         color="info"
                         startIcon={<EditIcon />}
+                        onClick={() => handleEdit(item.id)}
                         sx={{
                           borderRadius: 2,
                           textTransform: "none",
@@ -192,6 +208,7 @@ export default function HeroBanner() {
                       variant="contained"
                       color="primary"
                       startIcon={<VisibilityIcon />}
+                      onClick={() => handleView(item.id)}
                       sx={{
                         borderRadius: 2,
                         boxShadow: "0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)",
@@ -206,11 +223,13 @@ export default function HeroBanner() {
                       View Book
                     </Button>
                   </CardActions>
+
                 </Card>
               </Fade>
           ))
         )}
-      </Grid>
+
+        </Grid>
     </Box>
   )
 }
