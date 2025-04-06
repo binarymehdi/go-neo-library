@@ -65,7 +65,6 @@ export default function HeroBanner() {
           </Box>
         ) : (
           data.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
               <Fade in={true} timeout={500 + index * 100}>
                 <Card
                   sx={{
@@ -210,7 +209,6 @@ export default function HeroBanner() {
                   </CardActions>
                 </Card>
               </Fade>
-            </Grid>
           ))
         )}
       </Grid>
