@@ -35,7 +35,7 @@ export default function Header() {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <LibraryIcon sx={{ mr: 1 }} />
-        City Library
+        GoLibrary
       </Typography>
       <List>
         {navItems.map((item) => (
@@ -75,7 +75,7 @@ export default function Header() {
             }}
           >
             <LibraryIcon sx={{ mr: 1 }} />
-            City Library
+            GoLibrary
           </Typography>
           
           <Box sx={{ 

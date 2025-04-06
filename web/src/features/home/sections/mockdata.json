@@ -1,0 +1,22 @@
+{
+    "mockData": [
+        {
+        "id": 1,
+        "title": "Mock Data 1",
+        "description": "This is the first mock data item.",
+        "imageUrl": "https://example.com/image1.jpg"
+        },
+        {
+        "id": 2,
+        "title": "Mock Data 2",
+        "description": "This is the second mock data item.",
+        "imageUrl": "https://example.com/image2.jpg"
+        },
+        {
+        "id": 3,
+        "title": "Mock Data 3",
+        "description": "This is the third mock data item.",
+        "imageUrl": "https://example.com/image3.jpg"
+        }
+    ]
+}
