@@ -1,5 +1,3 @@
-"use client"
-
 import { Box, Typography, Button, Container, Paper } from "@mui/material"
 
 export default function HeroBanner() {
