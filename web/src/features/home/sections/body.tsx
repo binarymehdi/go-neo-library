@@ -28,10 +28,9 @@ export default function HeroBanner() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   useEffect(() => {
-    // Simulate fetching data from an API
     setTimeout(() => {
       setData(mockData)
-    }, 1000) // Simulate a 1 second delay
+    }, 1000)
   }, [])
 
   return (
