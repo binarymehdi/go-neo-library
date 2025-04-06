@@ -8,6 +8,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import BooksPage from './features/books/pages';
+
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 
 const router = createBrowserRouter([
   {
@@ -15,18 +19,21 @@ const router = createBrowserRouter([
     element: <div>Hello world!</div>,
   },
   {
-    path: "/hi",
-    element: <div>Hello world!!!</div>,
+    path: "/books",
+    element: <BooksPage/>,
   },
 ]); 
 
+const queryClient = new QueryClient();
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+      </QueryClientProvider>
       </ThemeProvider>
   </React.StrictMode>,
 );
